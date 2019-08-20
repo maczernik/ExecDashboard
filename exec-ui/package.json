@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "local": "ng serve --host=0.0.0.0 --port=4200 --proxy-config=proxy.config.json --env=local",
-    "prod": "ng serve --host=0.0.0.0 --port=4200 --proxy-config=proxy.config.json --env=prod"
+    "prod": "ng serve --host=0.0.0.0 --port=4200 --proxy-config=proxy.config.json --env=prod",
+    "mock:server": "json-server src/mocks/api-db.json --routes src/mocks/routes-db.json --middlewares src/mocks/login-middleware.js"
   },
   "private": true,
   "dependencies": {
@@ -49,12 +50,14 @@
     "codelyzer": "~3.2.2",
     "jasmine-core": "~2.6.4",
     "jasmine-spec-reporter": "~4.1.0",
+    "json-server": "^0.15.0",
     "karma": "~1.7.1",
     "karma-chrome-launcher": "~2.1.1",
     "karma-cli": "~1.0.1",
     "karma-coverage-istanbul-reporter": "^1.4.3",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.12.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.2",
     "tslint": "~5.7.0",

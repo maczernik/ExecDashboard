@@ -1,7 +1,8 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {Routes, RouterModule} from '@angular/router';
-import {DashboardComponent} from './components/dashboard/dashboard.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuard } from '../../../../auth/guards/auth-guard';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'portfolio/:portfolio-name/:portfolio-lob',
     pathMatch: 'full',
+    canActivate: [AuthGuard]
   }
 ];
 

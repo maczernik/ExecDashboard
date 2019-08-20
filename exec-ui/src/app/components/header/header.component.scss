@@ -1,6 +1,6 @@
 @import '../../../assets/styles/colors';
 
-header {
+:host {
   background-color: $blue-main;
   height: 60px;
   left: 0;
@@ -8,4 +8,29 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+
+  header {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-left: 15px;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .login-user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      .btn-outlined {
+        margin-left: 20px;
+      }
+    }
+  }
 }

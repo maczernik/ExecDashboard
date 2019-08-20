@@ -1,3 +1,10 @@
 <header>
     <app-header-logo></app-header-logo>
+    <div class="login-user" *ngIf="logedUser">
+        <img class="icon" src="../../../../../assets/images/person.svg" />
+        {{logedUser?.name}} {{logedUser?.surename}}
+        <button type="button" class="btn btn-outlined ucase" (click)="logout()">
+            Logout
+        </button>
+    </div>
 </header>
