@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { LoginComponent } from './auth/components/login/login.component';
 import { AuthGuard } from './auth/guards/auth-guard';
+import { IsLogedResolve } from './auth/resolvers/is-loged-resolve';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,7 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    resolve: [IsLogedResolve],
     data: { animation: undefined }
   },
   {

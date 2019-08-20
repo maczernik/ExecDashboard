@@ -4,7 +4,7 @@
     <span class="error" *ngIf="loginForm.get('name').status === 'INVALID' && loginForm.get('name').touched">
       Please enter a valid name. Name should contain at least 3 characters.
     </span>
-    <input class="input" formControlName="password" placeholder="Password" type="text" (change)="clearError()">
+    <input class="input" formControlName="password" placeholder="Password" type="password" (change)="clearError()">
     <span class="error" *ngIf="loginForm.get('password').status === 'INVALID' && loginForm.get('password').touched">
       Please enter a valid password. Name should contain at least 3 characters.
     </span>

@@ -15,6 +15,7 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth/services/auth.service';
 import { AuthGuard } from './auth/guards/auth-guard';
+import { IsLogedResolve } from './auth/resolvers/is-loged-resolve';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { AuthGuard } from './auth/guards/auth-guard';
     MetricsModule,
     BrowserAnimationsModule
   ],
-  providers: [SortingService, ElementResizeDetectorService, AuthService, AuthGuard],
+  providers: [SortingService, ElementResizeDetectorService, AuthService, AuthGuard, IsLogedResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule {
