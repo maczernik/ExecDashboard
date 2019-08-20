@@ -1,0 +1,62 @@
+@import '../../../../assets/styles/colors';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/retina';
+
+.auth-view {
+    padding: 60px 20px 0 20px;
+    position: relative;
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20%;
+
+        .input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #CCC;
+            color: white;
+            font-family: 'Arvo';
+            font-size: 18px;
+            width: 250px;
+            margin-top: 25px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input::-webkit-input-placeholder {
+            color: grey;
+        }
+
+        .error {
+            color: rgba(199, 199, 199, 0.836);
+            font-size: small;
+            width: 250px;
+            margin-top: 5px;
+        }
+
+        .login {
+            margin-right: 15px;
+            margin-top: 25px;
+
+            &:disabled {
+                background-color: $disabled-action;
+                color: gray;
+            }
+        }
+    }
+
+    .login-error {
+        font-family: 'Arvo';
+        color: red;
+        margin-top: 20px
+    }
+
+    .btn-local {
+        margin-top: 15px;
+    }
+}

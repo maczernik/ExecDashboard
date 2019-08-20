@@ -1,0 +1,24 @@
+<div class="auth-view">
+  <form (submit)="login(loginForm.value)" [formGroup]="loginForm" class="login-container">
+    <input class="input" formControlName="name" placeholder="Name" type="text" (change)="clearError()">
+    <span class="error" *ngIf="loginForm.get('name').status === 'INVALID' && loginForm.get('name').touched">
+      Please enter a valid name. Name should contain at least 3 characters.
+    </span>
+    <input class="input" formControlName="password" placeholder="Password" type="text" (change)="clearError()">
+    <span class="error" *ngIf="loginForm.get('password').status === 'INVALID' && loginForm.get('password').touched">
+      Please enter a valid password. Name should contain at least 3 characters.
+    </span>
+    <div class="actions">
+      <button class="login btn btn-outlined ucase" type="submit" [disabled]="!loginForm.valid">Login</button>
+      <button class="btn btn-outlined ucase" type="button" (click)="register()">Register</button>
+    </div>
+    <div class="login-error">
+      {{errorMessage}}
+    </div>
+  </form>
+  <div *ngIf="isLocalEnvironment">
+    This is the test environemnt. It is possible to login as:<br />
+    <button class="btn btn-outlined btn-local" (click)="loginLocal('admin')">name: admin password: admin</button><br />
+    <button class="btn btn-outlined btn-local" (click)="loginLocal('user')">name: user password: user</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "portfolio": [{
+            "id": 1,
+            "lob": "Company oop",
+            "name": "Project 1",
+            "executive": {
+                "firstName": "Mike",
+                "lastName": "Tyson",
+                "role": "Worker"
+            }
+        },
+        {
+            "id": 2,
+            "lob": "Company DDD",
+            "name": "Project 2",
+            "executive": {
+                "firstName": "Mike",
+                "lastName": "Tyson",
+                "role": "Worker"
+            }
+        }
+    ]
+}
